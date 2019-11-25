@@ -9,3 +9,7 @@
     text-align: center;
     margin-left: 30%;
 }
+.card-footer:hover{
+    font-weight: bold;
+}
+

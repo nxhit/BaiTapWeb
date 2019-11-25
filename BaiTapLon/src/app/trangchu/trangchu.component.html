@@ -1,71 +1,26 @@
-<div class="container-fluid">
-    <header>
-        <div class="banner">
-            <img src="assets\TaiNguyen\images\banner.png" alt="" width="100%" height="250px">
-        </div>
-        <div class="menu-navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <span class="navbar-brand mb-0 h1">Trang chủ</span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/lienhe">Liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/gopy">Góp ý</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/hoidap">Hỏi đáp</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/trangthi">Trang thi</a>
-                        </li>
-                    </ul>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tài khoản
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" routerLink="/dangky">Đăng ký</a>
-                            <a class="dropdown-item" routerLink="/dangnhap">Đăng nhập</a>
-                            <a class="dropdown-item" routerLink="/quenmatkhau">Quên mật khẩu</a>
-                            <hr width="85%">
-                            <a class="dropdown-item" routerLink="/dangnhap">Đăng xuất</a>
-                            <a class="dropdown-item" routerLink="/doimatkhau">Đổi mật khẩu</a>
-                            <a class="dropdown-item" routerLink="/capnhattaikhoan">Cập nhật tài khoản</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <br>
-    <main>
-        <div class="row">
-            <div class="col-9">
-
-            </div>
-            <div class="col-3">
-                <aside>
-                    <div class="list-group">
-                        <a routerLink="/danhmucmonhoc" class="list-group-item list-group-item-secondary">
-                            <i class='fas fa-th-list'> {{title}}</i>
-                        </a>
-                        <a *ngFor='let dmmh of danhmucmonhoc' type="button"
-                            class="list-group-item list-group-item-action">
-                            {{dmmh.Name}}</a>
-                    </div>
-
-                </aside>
-            </div>
-        </div>
-    </main>
-</div>
+Xây dựng website thi trắc nghiệm trực tuyến, sử dụng công nghệ Bootstrap và Angular với các chức năng theo yêu cầu sau
+<br>
+1.&nbsp;&nbsp;&nbsp;&nbsp; Người học vào trang danh mục môn học và chọn môn thi. Trang thi trắc nghiệm hiển thị phục vụ người học thi trắc
+nghiệm môn đã chọn. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; o Trang danh mục các môn học có phân trang, mỗi trang 4 hoặc 6 môn học. <br>
+&nbsp;&nbsp;&nbsp;&nbsp; o Trang thi phải
+có các yêu
+tố sau đây <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Mỗi lần hiển thị một câu hỏi <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Có các nút điều hướng để đến câu hỏi trước, sau, đầu và cuối <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Có đồng hồ hiển thị thời gian làm bài <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Hiển thị thông tin tổng hợp: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x Tổng số câu hỏi<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x Số câu đã làm <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x Tổng điểm đạt được <br> 
+2.&nbsp;&nbsp;&nbsp;&nbsp; Ngoài ra website cũng phải cung cấp các trang web để quản lý thành viên <br>
+&nbsp;&nbsp;&nbsp;&nbsp; o Đăng nhập <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Đăng ký <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Quên mậtkhẩu <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Đổi mật khẩu <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Sửa đổi thông tin tài khoản <br> 
+3.&nbsp;&nbsp;&nbsp;&nbsp; Website cũng cần phải có các trang thông dụng với hình thức tùy bạn thiết kế <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Giới thiệu <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Liên hệ <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Góp ý <br> 
+&nbsp;&nbsp;&nbsp;&nbsp; o Hỏi đáp

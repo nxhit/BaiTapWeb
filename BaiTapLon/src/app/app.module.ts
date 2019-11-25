@@ -1,61 +1,70 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{ Routes, RouterModule } from '@angular/router';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routesConfig: Routes = [
-  { path: '', component: TrangchuComponent},
-  { path: 'trangchu', component: TrangchuComponent},
-  { path: 'danhmucmonhoc', component: DanhmucmonhocComponent},
-  { path: 'gioithieu', component: GioithieuComponent},
-  { path: 'lienhe', component: LienheComponent},
-  { path: 'gopy', component: GopyComponent},
-  { path: 'hoidap', component: HoidapComponent},
-  { path: 'dangky', component: DangkyComponent},
-  { path: 'dangnhap', component: DangnhapComponent},
-  { path: 'quenmatkhau', component: QuenmatkhauComponent},
-  { path: 'doimatkhau', component: DoimatkhauComponent},
-  { path: 'capnhattaikhoan', component: SuadoithongtinComponent},
-  { path: 'trangthi', component: TrangthiComponent}
+  { path: '', component: TrangchuComponent },
+  { path: 'trangchu', component: TrangchuComponent },
+  { path: 'danhmucmonhoc', component: DanhmucmonhocComponent },
+  { path: 'gioithieu', component: GioithieuComponent },
+  { path: 'lienhe', component: LienheComponent },
+  { path: 'gopy', component: GopyComponent },
+  { path: 'hoidap', component: HoidapComponent },
+  { path: 'dangki', component: DangkiComponent },
+  { path: 'dangnhap', component: DangnhapComponent },
+  { path: 'quenmatkhau', component: QuenmatkhauComponent },
+  { path: 'doimatkhau', component: DoimatkhauComponent },
+  { path: 'capnhattaikhoan', component: SuadoitaikhoanComponent },
+  { path: 'trangthi/:Name/:Id', component: TrangthiComponent },
+  { path: '**', component: PageNotFoundComponent },
+
 ];
 
 import { AppComponent } from './app.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
-import { LienheComponent } from './lienhe/lienhe.component';
 import { GopyComponent } from './gopy/gopy.component';
 import { HoidapComponent } from './hoidap/hoidap.component';
+import { DangkiComponent } from './dangki/dangki.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
-import { DangkyComponent } from './dangky/dangky.component';
-import { QuenmatkhauComponent } from './quenmatkhau/quenmatkhau.component';
 import { DoimatkhauComponent } from './doimatkhau/doimatkhau.component';
-import { SuadoithongtinComponent } from './suadoithongtin/suadoithongtin.component';
-import { TrangthiComponent } from './trangthi/trangthi.component';
+import { SuadoitaikhoanComponent } from './suadoitaikhoan/suadoitaikhoan.component';
 import { DanhmucmonhocComponent } from './danhmucmonhoc/danhmucmonhoc.component';
+import { TrangthiComponent } from './trangthi/trangthi.component';
+import { LienheComponent } from './lienhe/lienhe.component';
+import { QuenmatkhauComponent } from './quenmatkhau/quenmatkhau.component';
+import { PageNotFoundComponent } from './page404/page404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrangchuComponent,
     GioithieuComponent,
-    LienheComponent,
     GopyComponent,
     HoidapComponent,
+    DangkiComponent,
     DangnhapComponent,
-    DangkyComponent,
-    QuenmatkhauComponent,
     DoimatkhauComponent,
-    SuadoithongtinComponent,
+    SuadoitaikhoanComponent,
+    DanhmucmonhocComponent,
     TrangthiComponent,
-    DanhmucmonhocComponent
+    LienheComponent,
+    QuenmatkhauComponent,
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routesConfig),
-    NgxPaginationModule
+    FormsModule,
+    NgxPaginationModule,
+    HttpClientModule,
+    RouterModule.forRoot(routesConfig)
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [RouterModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

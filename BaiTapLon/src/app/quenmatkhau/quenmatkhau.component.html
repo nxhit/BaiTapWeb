@@ -1,22 +1,44 @@
-<div class="quenmatkhau">
-    <div class="container">
-        <h2>QUÊN MẬT KHẨU</h2>
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Tài khoản</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="tên đăng nhập">
-                <small id="emailHelp" class="form-text text-muted"></small>
+<div class="container">
+        <h1 style="color:green   ;text-align:center">Quên mật khẩu</h1>
+    <br>
+        <div class="mb-3">
+            <label for="validationCustom01">Username</label>
+            <input type="text" class="form-control" id="validationCustom01" [(ngModel)]="formSudent.username"
+                [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="validationCustomUsername">Email</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="abc@gmail.com"
+                    [(ngModel)]="formSudent.email" [ngModelOptions]="{standalone: true}">
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Email khôi phục</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="email khôi phục">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Mã khôi phục</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mã khôi phục">
-            </div>
-            <button type="submit" class="btn btn-primary">Quên mật khẩu</button>
-        </form>
+        </div>
+    <label for="exampleInputEmail1">Nhập mật khẩu mới</label>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" [(ngModel)]="formSudent.passwordnew"
+                [ngModelOptions]="{standalone: true}">
+        </div>
     </div>
+    <br>
+    <div>
+        <button type="buuton" class="btn btn-primary mb-2" (click)="EditPass()">Đồng ý</button>
+    </div>
+    <h2>
+        Bảng test
+    </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">username</th>
+                <th scope="col">email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sv of students">
+                <th>{{sv.username}}</th>
+                <td>{{sv.email}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

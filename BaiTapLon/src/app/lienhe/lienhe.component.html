@@ -1,113 +1,66 @@
-<div class="container-fluid">
-    <header>
-        <div class="banner">
-            <img src="assets\TaiNguyen\images\banner.png" alt="" width="100%" height="250px">
-        </div>
-        <div class="menu-navbar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <span class="navbar-brand mb-0 h1">Trang chủ</span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Giới thiệu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Liên hệ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Góp ý</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Hỏi đáp</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/trangthi">Trang thi</a>
-                        </li>
-                    </ul>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tài khoản
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Đăng ký</a>
-                            <a class="dropdown-item" href="#">Đăng nhập</a>
-                            <a class="dropdown-item" href="#">Quên mật khẩu</a>
-                            <hr width="85%">
-                            <a class="dropdown-item" href="#">Đăng xuất</a>
-                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                            <a class="dropdown-item" href="#">Cập nhật tài khoản</a>
-                        </div>
+<main>
+    <div class="LienHe">
+        <div class="row">
+            <div class="trai col-6">
+                <fieldset>
+                    <legend><a href="#" id="lh">Bản Đồ</a></legend>
+                    <div id="map" style="width:100%;height:600px;"> <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3! 1d3723.8977453149246!2d105.83245751424809!3d21.036777085994046! 2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2! 1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgSOG7kyBDaMOtIE1pbmg! 5e0!3m2!1svi!2sus!4v1501056274257"
+                            width="100%" height="590px" frameborder="0" style="border:0; margin-left:0px;"
+                            allowfullscreen></iframe> </div>
+                </fieldset>
+            </div>
+            <div class="phai form col-6">
+                <fieldset>
+                    <legend><a href="#" id="lh">Liên Hệ</a></legend>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><label for="hvt">Họ và tên(Bắt buộc)</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="hvt" type="text" name="hvt" placeholder="Mời bạn nhập họ và tên">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email(Bắt buộc)</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="email" type="text" name="email"
+                                        placeholder="Mời bạn nhập địa chỉ mail"> </td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Phone</label></td>
+                            </tr>
+                            <tr>
+                                <td><input class="email" type="text" name="email" placeholder="Mời bạn nhập số phone">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="mt">Mô tả</label></td>
+                            </tr>
+                            <tr>
+                                <td><textarea name="message" id="message" type="text"
+                                        placeholder="Vui lòng nhập chi tiết yêu cầu của bạn. Thành viên nhóm hỗ trợ của chúng tôi sẽ trả lời ngay khi có thể"
+                                        cols="50" rows="10"
+                                        style=" margin-left: 0px; width: 400px; height: 170px;"></textarea> </td>
+                            </tr>
+                            <tr>
+                                <td> <label for="file" style="margin-top: 30px;">Tập tin đính kèm</label> <input
+                                        class="ipfile" type="file"><br> <input type="submit" id="goi" value="Gởi"
+                                        onclick="Redirect();" />
+                                    <script
+                                        language="javascript"> var submit = document.getElementById("goi"); 
+                                        submit.onclick = function () { 
+                                            alert("Yêu cầu được gửi thành công! Chúng tôi sẽ phản hồi cho bạn qua EMAIL"); 
+                                            } 
+                                    </script>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <br>
-    <main>
-        <div class="LienHe">
-            <div class="row">
-                <div class="trai col-6">
-                    <fieldset>
-                        <legend><a href="#" id="lh">Bản Đồ</a></legend>
-                        <div id="map" style="width:100%;height:600px;"> <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3! 1d3723.8977453149246!2d105.83245751424809!3d21.036777085994046! 2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2! 1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgSOG7kyBDaMOtIE1pbmg! 5e0!3m2!1svi!2sus!4v1501056274257"
-                                width="90%" height="590px" frameborder="0" style="border:0; margin-left:35px;"
-                                allowfullscreen></iframe> </div>
-                    </fieldset>
-                </div>
-                <div class="phai form col-6">
-                    <fieldset>
-                        <legend><a href="#" id="lh">Liên Hệ</a></legend>
-                        <div>
-                            <table>
-                                <tr>
-                                    <td><label for="hvt">Họ và tên(Bắt buộc)</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="hvt" type="text" name="hvt" placeholder="Mời bạn nhập họ và tên">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><label for="email">Email(Bắt buộc)</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="email" type="text" name="email"
-                                            placeholder="Mời bạn nhập địa chỉ mail"> </td>
-                                </tr>
-                                <tr>
-                                    <td><label for="email">Phone</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="email" type="text" name="email"
-                                            placeholder="Mời bạn nhập số phone"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="mt">Mô tả</label></td>
-                                </tr>
-                                <tr>
-                                    <td><textarea name="message" id="message" type="text"
-                                            placeholder="Vui lòng nhập chi tiết yêu cầu của bạn. Thành viên nhóm hỗ trợ của chúng tôi sẽ trả lời ngay khi có thể"
-                                            cols="50" rows="10"
-                                            style=" margin-left: 90px; width: 100%; height: 170px;"></textarea> </td>
-                                </tr>
-                                <tr>
-                                    <td> <label for="file" style="margin-top: 30px;">Tập tin đính kèm</label> <input
-                                            class="ipfile" type="file"><br> <input type="submit" id="goi" value="Gởi"
-                                            onclick="Redirect();" />
-                                        <script
-                                            language="javascript"> var submit = document.getElementById("goi"); submit.onclick = function () { alert("Yêu cầu được gửi thành công! Chúng tôi sẽ phản hồi cho bạn qua EMAIL"); } </script>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </fieldset>
-                </div>
+                </fieldset>
             </div>
         </div>
-    </main>
-</div>
+    </div>
+</main>
